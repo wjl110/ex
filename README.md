@@ -1,5 +1,7 @@
 # Welcome to your Expo app 👋
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e7512e2-9b18-4031-b35a-0f2d43498e9f/deploy-status)](https://app.netlify.com/sites/zhuan123/deploys)
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
