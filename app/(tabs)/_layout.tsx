@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, FontAwesome } from '@expo/vector-icons';
 
 export default function TabsLayout() {
   return (
@@ -8,41 +8,50 @@ export default function TabsLayout() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
+          let IconComponent = Ionicons;
 
           if (route.name === 'index') {
-            iconName = focused ? 'home' : 'home-outline';
+            iconName = 'home';
           } else if (route.name === 'explore') {
-            iconName = focused ? 'list' : 'list-outline';
+            iconName = 'trophy';
+            IconComponent = FontAwesome;
           } else if (route.name === 'my-tasks') {
-            iconName = focused ? 'briefcase' : 'briefcase-outline';
+            iconName = 'game-controller';
           } else if (route.name === 'profile') {
-            iconName = focused ? 'person' : 'person-outline';
+            iconName = 'person';
           }
 
-          return <Ionicons name={iconName} size={size} color={color} />;
+          return <IconComponent name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#FF6B00',
+        tabBarActiveTintColor: '#FF5252',
         tabBarInactiveTintColor: 'gray',
+        tabBarStyle: {
+          height: 55,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          marginBottom: 5,
+        },
       })}
     >
       <Tabs.Screen 
         name="index" 
         options={{ 
           title: '首页',
-          headerShown: true
+          headerShown: false
         }} 
       />
       <Tabs.Screen 
         name="explore" 
         options={{ 
-          title: '任务', 
+          title: '悬赏大厅', 
           headerShown: true
         }} 
       />
       <Tabs.Screen 
         name="my-tasks" 
         options={{ 
-          title: '我的任务', 
+          title: '更多赚钱', 
           headerShown: true
         }} 
       />
