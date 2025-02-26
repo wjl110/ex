@@ -79,9 +79,9 @@ const TASKS = [
 // 功能按钮数据
 const FEATURES = [
   { id: '1', title: '新人福利', icon: 'gift', color: '#FFC107', route: '/new-user' },
-  { id: '2', title: '任务大奖', icon: 'list-alt', color: '#4C6EF5', route: '/tasks' },
+  { id: '2', title: '任务大奖', icon: 'list-alt', color: '#4C6EF5', route: '/task-rewards' },
   { id: '3', title: '推广奖励', icon: 'megaphone', color: '#FA5252', route: '/promotion', badge: 2 },
-  { id: '4', title: '每日福利', icon: 'calendar', color: '#E64980', route: '/daily' },
+  { id: '4', title: '每日福利', icon: 'calendar', color: '#E64980', route: '/daily-rewards' },
 ];
 
 export default function HomeScreen() {

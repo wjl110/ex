@@ -19,6 +19,10 @@ export default function RootLayout() {
             <Stack.Screen name="publish-task" options={{ headerShown: true, title: '发布任务' }} />
             <Stack.Screen name="login" />
             <Stack.Screen name="register" />
+            <Stack.Screen name="new-user" options={{ headerShown: true, title: '新人福利' }} />
+            <Stack.Screen name="task-rewards" options={{ headerShown: true, title: '任务大奖' }} />
+            <Stack.Screen name="promotion" options={{ headerShown: true, title: '推广奖励' }} />
+            <Stack.Screen name="daily-rewards" options={{ headerShown: true, title: '每日福利' }} />
           </Stack>
         </AuthProvider>
       </PaperProvider>

@@ -5,6 +5,13 @@ interface User {
   id: string;
   username: string;
   balance: number;
+  avatarUrl?: string;
+  taskBalance?: number;
+  rewardBalance?: number;
+  trustScore?: number;
+  maxTrustScore?: number;
+  memberType?: string;
+  isVip?: boolean;
 }
 
 interface AuthContextType {
@@ -53,9 +60,16 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     try {
       // 这里应该是调用API的逻辑，现在暂时模拟
       const mockUser = {
-        id: '1',
-        username,
-        balance: 10.0, // 新用户送10元
+        id: '3833445',
+        username: user ? username : 'Jessica_Ch',
+        balance: 10.0,
+        avatarUrl: 'https://via.placeholder.com/80x80',
+        taskBalance: 0,
+        rewardBalance: 0,
+        trustScore: 10474,
+        maxTrustScore: 50000,
+        memberType: '年度会员',
+        isVip: true,
       };
 
       await SecureStore.setItemAsync('user', JSON.stringify(mockUser));
@@ -71,9 +85,16 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     try {
       // 这里应该是调用API的注册逻辑，现在暂时模拟
       const mockUser = {
-        id: '1',
-        username,
-        balance: 10.0, // 新用户送10元
+        id: '3833445',
+        username: username,
+        balance: 10.0,
+        avatarUrl: 'https://via.placeholder.com/80x80',
+        taskBalance: 0,
+        rewardBalance: 0,
+        trustScore: 10474,
+        maxTrustScore: 50000,
+        memberType: '年度会员',
+        isVip: true,
       };
 
       await SecureStore.setItemAsync('user', JSON.stringify(mockUser));
